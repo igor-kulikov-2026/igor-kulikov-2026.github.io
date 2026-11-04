@@ -1,5 +1,8 @@
 'use strict';
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearElement = document.getElementById('year');
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
 // Back to Top
 document.addEventListener('DOMContentLoaded', () => {
     const backToTop = document.getElementById('backToTop');
@@ -24,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.scrollTo({
             top: 0,
-            behavior: reduceMotion ? 'instant' : 'smooth'
+            behavior: reduceMotion ? 'auto' : 'smooth'
         });
     });
 
