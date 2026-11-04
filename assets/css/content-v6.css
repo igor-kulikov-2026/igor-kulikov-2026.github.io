@@ -1,0 +1,11 @@
+/* Content V6 — AI-assisted engineering skill card */
+.skills-grid .skill-card-ai {
+    grid-column: 1 / -1;
+}
+
+/* Preserve the established mobile single-column layout. */
+@media (max-width: 700px) {
+    .skills-grid .skill-card-ai {
+        grid-column: auto;
+    }
+}
