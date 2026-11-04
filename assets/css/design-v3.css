@@ -1,0 +1,19 @@
+/* Design V3 — Experience timeline and project cards */
+.career-timeline { position: relative; display: grid; gap: 22px; margin-left: 10px; padding-left: 30px; border-left: 2px solid var(--line); }
+.career-entry { position: relative; display: grid; grid-template-columns: 125px minmax(0, 1fr); gap: 24px; align-items: start; }
+.career-entry::before { content: ""; position: absolute; left: -39px; top: 25px; width: 14px; height: 14px; border-radius: 50%; background: var(--blue); border: 3px solid #fff; box-shadow: 0 0 0 2px var(--line); }
+.career-date { color: var(--blue); font-weight: 750; padding-top: 23px; white-space: nowrap; }
+.career-content { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; box-shadow: 0 5px 20px rgba(17,33,59,.035); }
+.career-content h3 { margin: 0 0 9px; font-size: 19px; line-height: 1.35; }
+.career-content p { margin: 0; color: var(--muted); }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.project-card { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; border: 1px solid var(--line); border-radius: 16px; padding: 28px; background: #fff; box-shadow: 0 6px 22px rgba(17,33,59,.035); transition: transform .2s ease, box-shadow .2s ease; }
+.project-symbol { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px; background: #edf4ff; color: var(--blue); font-size: 24px; font-weight: 700; margin-bottom: 18px; }
+.project-period { margin: 0 0 6px; color: var(--blue); font-size: 13px; font-weight: 700; }
+.project-card h3 { font-size: 20px; line-height: 1.35; margin: 0 0 12px; }
+.project-card > p:not(.project-period) { margin: 0 0 20px; color: var(--muted); }
+.project-card .tags { margin-top: auto; }
+@media (hover: hover) { .project-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(17,33,59,.09); } }
+@media (max-width: 850px) { .career-entry { grid-template-columns: 1fr; gap: 8px; } .career-date { padding-top: 0; } .career-entry::before { top: 5px; } .project-grid { grid-template-columns: 1fr; } }
+@media (max-width: 500px) { .career-timeline { padding-left: 22px; } .career-entry::before { left: -31px; } .career-content, .project-card { padding: 20px; } }
+@media (prefers-reduced-motion: reduce) { .project-card { transition: none; } }
