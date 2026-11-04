@@ -59,3 +59,22 @@
 #skills {
     padding-top: 36px;
 }
+
+/* Design V5 — Mobile refinements */
+
+@media (max-width: 500px) {
+
+    /* Reduce empty space above Hero */
+    .hero {
+        padding-top: 42px;
+    }
+
+    /* Smaller Back to Top button */
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+        right: 12px;
+        bottom: 12px;
+        font-size: 20px;
+    }
+}
