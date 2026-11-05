@@ -1,0 +1,86 @@
+/* Portfolio V8: language switcher and future RTL layout */
+html[dir="rtl"] body { text-align:start; }
+html[dir="rtl"] .top, html[dir="rtl"] .actions { direction:rtl; }
+html[dir="rtl"] .tags, html[dir="rtl"] .metrics { unicode-bidi:isolate; }
+html[dir="rtl"] .brand, html[dir="rtl"] .language-switcher { direction:ltr; }
+
+/* Floating language switcher — Portfolio V8 */
+.floating-language-switcher {
+    position: fixed;
+    left: 28px;
+    bottom: 28px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 48px;
+    padding: 0 14px;
+
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    box-shadow: 0 6px 20px rgba(24, 90, 199, 0.18);
+
+    font-size: 14px;
+    font-weight: 700;
+    direction: ltr;
+    white-space: nowrap;
+}
+
+.floating-language-switcher a {
+    color: var(--ink);
+    text-decoration: none;
+    padding: 6px 4px;
+    border-radius: 4px;
+}
+
+.floating-language-switcher a[aria-current="page"] {
+    color: var(--blue);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.floating-language-switcher a:hover {
+    color: var(--blue);
+}
+
+.floating-language-switcher a:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .floating-language-switcher {
+        left: 16px;
+        bottom: 16px;
+        min-height: 44px;
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .floating-language-switcher {
+        left: 12px;
+        bottom: 12px;
+        min-height: 42px;
+    }
+}
+
+@media (max-width:800px) {
+    .top { flex-wrap:wrap; }
+}
+
+/* Hebrew RTL adjustments */
+html[dir="rtl"] .top .brand { direction: rtl; }
+html[dir="rtl"] .top nav:not(.language-switcher) { direction: rtl; }
+html[dir="rtl"] .hero, html[dir="rtl"] .two-col, html[dir="rtl"] .skills-grid, html[dir="rtl"] .project-grid { direction: rtl; }
+html[dir="rtl"] .hero, html[dir="rtl"] .hero-panel, html[dir="rtl"] .career-content, html[dir="rtl"] .project-card, html[dir="rtl"] .skill-card { text-align: start; }
+html[dir="rtl"] .career-timeline { direction: rtl; }
+html[dir="rtl"] .tags { justify-content: flex-start; }
+html[dir="rtl"] .tags span[dir="ltr"] { unicode-bidi: isolate; }
+html[dir="rtl"] .metrics { direction: rtl; }
+html[dir="rtl"] .language-switcher { direction: ltr; }
+html[dir="rtl"] .skill-symbol, html[dir="rtl"] .project-symbol { direction: ltr; }
