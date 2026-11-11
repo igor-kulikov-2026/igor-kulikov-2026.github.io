@@ -1,6 +1,6 @@
 /* Design V4 — Technical Skills */
 .skills-section {
-    background: #fff;
+    background: transparent;
 }
 .skills-grid {
     display: grid;

@@ -18,7 +18,7 @@ body {
     margin:0;
     font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
     color:var(--ink);
-    background:#fff;
+    background:linear-gradient(90deg,#e8edf3 0%,#e0ecf8 50%,#cbdff5 100%);
 }
 
 a {
@@ -210,7 +210,6 @@ a:focus-visible {
 
 .strip {
     padding:30px 0;
-    background:var(--soft);
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
 }
@@ -260,7 +259,7 @@ a:focus-visible {
 }
 
 .muted {
-    background:var(--soft);
+    background:transparent;
 }
 
 .section-intro {
@@ -328,7 +327,7 @@ a:focus-visible {
 }
 
 .contact {
-    background:#edf4ff;
+    background:transparent;
     text-align:center;
 }
 
