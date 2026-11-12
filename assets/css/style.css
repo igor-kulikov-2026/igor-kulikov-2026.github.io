@@ -80,6 +80,36 @@ a:focus-visible {
     white-space:nowrap;
 }
 
+.availability {
+    padding-top:24px;
+}
+
+.availability-badge {
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    max-width:100%;
+    padding:8px 16px;
+    border:1px solid #b4d9c5;
+    border-radius:999px;
+    background:#edf8f1;
+    color:#226443;
+    font-size:14px;
+    font-weight:700;
+}
+
+.availability-badge:hover {
+    background:#dff1e6;
+    border-color:#7fbc9b;
+}
+
+.availability-dot {
+    flex:0 0 8px;
+    height:8px;
+    border-radius:50%;
+    background:#278450;
+}
+
 .hero {
     display:grid;
     grid-template-columns:1.35fr .8fr;
